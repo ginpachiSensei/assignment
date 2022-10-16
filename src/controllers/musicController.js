@@ -10,7 +10,7 @@ const getMusic = async (req, res) => {
 };
 
 // @desc    Fetch single product
-// @route   GET /api/products/:id
+// @route   GET /api/music/:id
 // @access  Public
 const getMusicById = async (req, res) => {
   const music = await Music.findById(req.params.id);
@@ -37,7 +37,7 @@ const deleteMusic = async (req, res) => {
   }
 };
 
-// @desc    Create a product
+// @desc    Create music
 // @route   POST /api/music
 // @access  Private/Admin
 const createMusic = async (req, res) => {
@@ -61,11 +61,11 @@ const updateMusic = async (req, res) => {
   const music = await Music.findById(req.params.id);
 
   if (music) {
-    music.title = req.body.title;
-    music.artist = req.body.artist;
-    music.album = req.body.album;
-    music.genre = req.body.genere;
-    music.description = req.body.description;
+    music.title = req.body.title || music.title;
+    music.artist = req.body.artist || music.artist;
+    music.album = req.body.album || music.album;
+    music.genre = req.body.genere || music.genre;
+    music.description = req.body.description || music.description;
 
     const updatedMusic = await music.save();
 
