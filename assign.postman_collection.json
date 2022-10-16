@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "7c4a5dc6-ed33-46f2-9f90-d1ff45b3bc6c",
+		"name": "assign",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17884516"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "POST user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin@example.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST add song to like ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/like/634c7c71dd46eb5b2764aebc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"like",
+								"634c7c71dd46eb5b2764aebc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET all liked songs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/like",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST add song to dislike",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/dislike/634c7c71dd46eb5b2764aebc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"dislike",
+								"634c7c71dd46eb5b2764aebc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET all disliked songs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/dislike",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"dislike"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "music",
+			"item": [
+				{
+					"name": "GET all music",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"satyam@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/music/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"music",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST create music",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"sample tile3\",\r\n    \"artist\":\"sample artist\",\r\n    \"album\":\"sample album\",\r\n    \"description\":\"sample\",\r\n    \"genere\":\"genere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/music/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"music",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE music by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/music/634c71346e14a7f25e5657e1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"music",
+								"634c71346e14a7f25e5657e1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
