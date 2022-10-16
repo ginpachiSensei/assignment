@@ -33,7 +33,8 @@
 								"users",
 								"login"
 							]
-						}
+						},
+						"description": "used to login. here the login system creates a new user in the database and genereates jwt for it which is stored as barer_token environment variable"
 					},
 					"response": []
 				},
@@ -53,7 +54,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/users/like/634c7c71dd46eb5b2764aebc",
+							"raw": "{{url}}/api/users/like/:music id",
 							"host": [
 								"{{url}}"
 							],
@@ -61,9 +62,16 @@
 								"api",
 								"users",
 								"like",
-								"634c7c71dd46eb5b2764aebc"
+								":music id"
+							],
+							"variable": [
+								{
+									"key": "music id",
+									"value": null
+								}
 							]
-						}
+						},
+						"description": "This route takes in the music id of the song that is to be set in the like of the specific user accessed through barer_token"
 					},
 					"response": []
 				},
@@ -92,7 +100,8 @@
 								"users",
 								"like"
 							]
-						}
+						},
+						"description": "This route returns all the song present in like of specific user accessed though bearer_token"
 					},
 					"response": []
 				},
@@ -122,7 +131,8 @@
 								"dislike",
 								"634c7c71dd46eb5b2764aebc"
 							]
-						}
+						},
+						"description": "this route takes in music id of the song that is added to dislike section of the specific user passed though bearer_token"
 					},
 					"response": []
 				},
@@ -151,7 +161,8 @@
 								"users",
 								"dislike"
 							]
-						}
+						},
+						"description": "This route returns all the songs in the dislike secion of user passed though bearer_token"
 					},
 					"response": []
 				}
@@ -197,7 +208,8 @@
 								"music",
 								""
 							]
-						}
+						},
+						"description": "This route returns all the songs present in the database"
 					},
 					"response": []
 				},
@@ -235,7 +247,8 @@
 								"music",
 								""
 							]
-						}
+						},
+						"description": "This request takes song object with parameters\n\n{\n\ntitle,\n\nartist,\n\nalbum.\n\nStartFragment\n\ndescription\n\nEndFragment\n\ngenre\n\n}\n\nand creates a new song in the database"
 					},
 					"response": []
 				},
@@ -255,14 +268,79 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/music/634c71346e14a7f25e5657e1",
+							"raw": "{{url}}/api/music/:music id",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"music",
-								"634c71346e14a7f25e5657e1"
+								":music id"
+							],
+							"variable": [
+								{
+									"key": "music id",
+									"value": null
+								}
+							]
+						},
+						"description": "This route takes in the music id and deletes the specific song from database"
+					},
+					"response": []
+				},
+				{
+					"name": "GET music by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/music/634c7df185c097567739668e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"music",
+								"634c7df185c097567739668e"
+							]
+						},
+						"description": "This route takes in the id of the specific music and return the contents of music from database"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT update music",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"not sample\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/music/634c7df185c097567739668e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"music",
+								"634c7df185c097567739668e"
 							]
 						}
 					},
