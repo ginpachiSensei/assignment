@@ -3,7 +3,7 @@ import Music from "../db-models/musicModel.js";
 import generateToken from "../utils/generateToken.js";
 
 // @desc    auth user and get token
-// @route   POST api/users/login
+// @route   POST /users/login
 // @access  Public
 const authUser = async (req, res) => {
   const { email, password, isAdmin } = req.body;
@@ -40,7 +40,7 @@ const authUser = async (req, res) => {
 };
 
 // @desc    get all song in like list
-// @route   GET api/users/like
+// @route   GET /users/like
 // @access  Public
 const getAllLike = async (req, res) => {
   const user = req.user;
@@ -58,7 +58,7 @@ const getAllLike = async (req, res) => {
 };
 
 // @desc    get all songs in dislike list
-// @route   GET api/users/dislike
+// @route   GET /users/dislike
 // @access  Public
 const getAllDislike = async (req, res) => {
   const user = req.user;
@@ -76,7 +76,7 @@ const getAllDislike = async (req, res) => {
 };
 
 // @desc    add song to like list
-// @route   POST api/users/like/:id
+// @route   POST /users/like/:id
 // @access  Public
 const addLike = async (req, res) => {
   const user = req.user;
@@ -104,7 +104,7 @@ const addLike = async (req, res) => {
 };
 
 // @desc    add song to dislike list
-// @route   POST api/users/dislike/:id
+// @route   POST /users/dislike/:id
 // @access  Public
 const addDislike = async (req, res) => {
   const user = req.user;

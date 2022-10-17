@@ -13,11 +13,11 @@ connectDB();
 
 app.use(express.json());
 
-app.use("/api/music", musicRoutes);
-app.use("/api/users", userRoutes);
+app.use("/music", musicRoutes);
+app.use("/users", userRoutes);
 
 app.get("/", (req, res) => {
-  res.send("API is running....");
+  res.send("API is running.... go to /music for music and /users for users");
 });
 
 app.use(notFound);

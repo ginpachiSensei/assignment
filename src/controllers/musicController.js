@@ -1,7 +1,7 @@
 import Music from "../db-models/musicModel.js";
 
 // @desc    Fetch all music
-// @route   GET /api/music
+// @route   GET /music
 // @access  Public
 const getMusic = async (req, res) => {
   const music = await Music.find({});
@@ -10,7 +10,7 @@ const getMusic = async (req, res) => {
 };
 
 // @desc    Fetch single product
-// @route   GET /api/music/:id
+// @route   GET /music/:id
 // @access  Public
 const getMusicById = async (req, res) => {
   const music = await Music.findById(req.params.id);
@@ -24,7 +24,7 @@ const getMusicById = async (req, res) => {
 };
 
 // @desc    Delete a product
-// @route   DELETE /api/music/:id
+// @route   DELETE /music/:id
 // @access  Private/Admin
 const deleteMusic = async (req, res) => {
   const music = await Music.findById(req.params.id);
@@ -38,7 +38,7 @@ const deleteMusic = async (req, res) => {
 };
 
 // @desc    Create music
-// @route   POST /api/music
+// @route   POST /music
 // @access  Private/Admin
 const createMusic = async (req, res) => {
   const music = new Music({
@@ -55,7 +55,7 @@ const createMusic = async (req, res) => {
 };
 
 // @desc    Update a music
-// @route   PUT /api/music/:id
+// @route   PUT /music/:id
 // @access  Private/Admin
 const updateMusic = async (req, res) => {
   const music = await Music.findById(req.params.id);

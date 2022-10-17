@@ -24,12 +24,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/users/login",
+							"raw": "{{url}}/users/login",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"users",
 								"login"
 							]
@@ -54,12 +53,11 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/users/like/:music id",
+							"raw": "{{url}}/users/like/:music id",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"users",
 								"like",
 								":music id"
@@ -91,12 +89,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/users/like",
+							"raw": "{{url}}/users/like",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"users",
 								"like"
 							]
@@ -121,12 +118,11 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/users/dislike/634c7c71dd46eb5b2764aebc",
+							"raw": "{{url}}/users/dislike/634c7c71dd46eb5b2764aebc",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"users",
 								"dislike",
 								"634c7c71dd46eb5b2764aebc"
@@ -152,12 +148,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/users/dislike",
+							"raw": "{{url}}/users/dislike",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"users",
 								"dislike"
 							]
@@ -199,12 +194,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/music/",
+							"raw": "{{url}}/music/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"music",
 								""
 							]
@@ -238,12 +232,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/music/",
+							"raw": "{{url}}/music/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"music",
 								""
 							]
@@ -268,12 +261,11 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/music/:music id",
+							"raw": "{{url}}/music/:music id",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"music",
 								":music id"
 							],
@@ -294,12 +286,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/music/634c7df185c097567739668e",
+							"raw": "{{url}}/music/634c7df185c097567739668e",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"music",
 								"634c7df185c097567739668e"
 							]
@@ -333,12 +324,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/music/634c7df185c097567739668e",
+							"raw": "{{url}}/music/634c7df185c097567739668e",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
 								"music",
 								"634c7df185c097567739668e"
 							]
